@@ -1,0 +1,486 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.left-sidebar,
+.right-sidebar{
+    width: 300px;
+    background-color: #f5f8fa;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.left-sidebar {
+    left: 0;
+}
+
+.right-sidebar {
+    right: 0;
+    
+    
+}
+
+.content {
+    margin: 0 270px; /* Adjust the margin to match the combined width of sidebars */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.tweet {
+    background-color: #ffffff;
+    border: 1px solid #e1e8ed;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition : 0.02s ease;
+}
+html{
+    font-family: 'Playfair Display', serif;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;  
+}
+
+a{
+    text-decoration: none;
+    color: var(--colorPrimary);
+    font-size: 18px;
+}
+li{
+    list-style: none;
+}
+body{
+    background : var(--background) ;
+    padding : 0 ;
+}
+.container{
+    max-width: 1440px;
+    margin: 0;
+    height: 100vh;
+   
+
+}
+.side-bar{
+    height: 100vh;
+    width : 300px;
+    border-right: 1px solid #63609b98;
+    background : rgba(119, 105, 119, 0.533);
+    padding-top: 20px ;
+    
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+    
+}
+.nav-bar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 100;
+}
+.nav-bar-brand{
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 8px 8x 4px 10px;
+    border-radius: 50px;
+}
+.nav-bar-brand:hover{
+    background :var(--brandbackground);
+}
+.nav-bar-brand a ion-icon{
+    font-size: 30px;
+}
+.nav-item{
+    padding: 8px 25px 8px 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content :flex-start;
+    align-items:center;
+    cursor: pointer;
+
+}
+.nav-item:hover{
+    background :var(--itembackground);
+}
+.nav-item .item-icon{
+    margin-right: 15px;
+}
+.nav-item .item-icon ion-icon{
+    font-size: 24px ;
+}
+.nav-item .item-icon.hash{
+    padding: 0 3px;
+    font-size: 25px;
+    font-weight: 5000;
+}
+a.tweet-btn{
+    display: block;
+    width: 230px;
+    background: var(--tweetBtnBg);
+    color:var(--colorWhite);
+    text-align: center;
+    padding: 15px;
+    margin-top:5px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+a.tweet-btn ion-icon{
+    font-size:20px;
+    color: #d6e7d9;
+    display: none;
+}
+a.tweet-btn:hover{
+    --tweetBtnBg: #2a1e7bb9;
+}
+a.profile-btn{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+a.profile-btn:hover{
+    background: var(--itembackground);
+}   
+
+.profile-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+}
+img.profile-img{
+    border-radius: 100%;
+    margin-right: 15px;
+}
+.profile-info .name{
+    font-weight: bold;
+    line-height: 2;
+}
+.profile-info .username{
+    color: var(--colorSecondary);
+}
+.option-icon ion-icon{
+    font-size:16px;
+    margin-top: 2px;
+}
+
+a.profile-btn{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+a.profile-btn:hover{
+    background: var(--itembackground);
+}   
+
+.profile-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+}
+img.profile-img{
+    border-radius: 100%;
+    margin-right: 15px;
+}
+.profile-info .name{
+    font-weight: bold;
+    line-height: 2;
+}
+.profile-info .username{
+    color: var(--colorSecondary);
+}
+.option-icon ion-icon{
+    font-size:16px;
+    margin-top: 2px;
+}
+
+
+
+
+
+
+
+
+
+aside{
+    flex: 0.3; 
+}
+
+.aside_input{
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background-color);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.aside_input input{
+    border: none;
+    background-color: var(--twitter-background-color);
+    outline: none;
+}
+
+.aside_search-icon{
+    color: rgb(34, 32, 32);
+}
+
+.aside_container{
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+.aside_container h2{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.timeline {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.tweet {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.like-btn,
+.retweet-btn {
+    margin-top: 10px;
+}
+
+.timeline{
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+
+.tweet img{
+
+    width: 250px;
+    object-fit: contain;
+    border-radius: 220px;
+
+}
+
+
+
+
+
+
+
+
+
+/* styles.css */
+
+/* Right Sidebar */
+
+
+/* User Profile */
+.user-profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.user-profile h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.user-profile p {
+    color: #657786;
+    margin: 0;
+}
+
+/* Trending Topics */
+.trending-topics {
+    margin-top: 20px;
+}
+
+.trending-topics h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.trending-topics ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.trending-topics li {
+    margin-bottom: 10px;
+    color: #1da1f2;
+    cursor: pointer;
+}
+
+.trending-topics li:hover {
+    text-decoration: underline;
+}
+
+body{
+    background-color: #8a847f;
+}
+
+/*icon*/
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
+
+/*style post*/
+
+.avatar img{
+   border-radius: 50%;
+   height: 40px;
+}
+.post {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--twitter-background-color);
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+
+}
+
+.post_body img{
+    width: 450px;
+    object-fit: contain;
+    border-radius: 20px ;
+}
+
+.post_body video{
+    width: 450px;
+    object-fit: contain;
+    border-radius: 20px ;
+}
+
+.post__footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+.post_badge{
+    font-size: 14px !important;
+    color: #8a847f;
+    margin-right: 5px;
+}
+
+.post_headerspecial{
+    font-weight: 600;
+    font-size: 22px;
+    color: gray;
+}
+
+.post_headertext h3{
+    font-size: 15px;
+    margin-bottom: 5px;
+
+
+}
+
+.post__headerDescription{
+    margin-bottom:10px;
+    font-size: 15px;
+}
+.post_body{
+    flex: 1;
+    padding: 10px;
+
+}
+.avatar{
+    padding: 20px;
+}
+
+
+
